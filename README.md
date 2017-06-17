@@ -1,2 +1,2 @@
 # token-gen
-![Alt text](https://github.com/Ononame/token-gen/2.png)
+![Alt text](https://github.com/Ononame/token-gen/blob/master/2.png)
