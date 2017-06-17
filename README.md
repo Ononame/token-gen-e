@@ -1,5 +1,5 @@
 # token-gen
-[中文链接](https://github.com/Ononame/token-gen)
+[中文链接](https://ononame.github.io/token-gen/)
 
 step1: Copy the following link to the firefox browser address bar and open it 
 
