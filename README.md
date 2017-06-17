@@ -4,10 +4,10 @@ step1: Copy the following link to the firefox browser address bar and open it
 
 
 step2: Enter your facebook account and password on the page and click login 
-![Alt text](https://github.com/Ononame/token-gen-e/blob/master/６.png)
+![Alt text](https://github.com/Ononame/token-gen-e/blob/master/6.png)
 
 step3：Pop up this interface, and don't click on the confirmation button 
-![Alt text](https://github.com/Ononame/token-gen-e/blob/master/７.png)
+![Alt text](https://github.com/Ononame/token-gen-e/blob/master/7.png)
 
 
 step4: Press F12 on this page 
@@ -16,10 +16,10 @@ Copy the following code to the red arrow mark and press enter
 function addXMLRequestCallback(callback){var oldSend,i;if(XMLHttpRequest.callbacks){XMLHttpRequest.callbacks.push(callback);}else{XMLHttpRequest.callbacks=[callback];oldSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(){for(i=0;i<XMLHttpRequest.callbacks.length;i++){XMLHttpRequest.callbacks[i](this);}oldSend.apply(this,arguments);}}}
 addXMLRequestCallback(function(xhr){xhr.onreadystatechange=function(){if(xhr.readyState==4&&(xhr.status==200||xhr.status==304)){var regx=/access_token=(.*?)&expires_in/;var res=xhr.responseText.match(regx);if(res!=null){XMLHttpRequest.callbacks=[];alert(res[1]);}}};});
 ```
-![Alt text](https://github.com/Ononame/token-gen-e/blob/master/８.png)
+![Alt text](https://github.com/Ononame/token-gen-e/blob/master/8.png)
 
 
 step5: Click the confirmation button appeared in step 3 
 In the popup box is token (CTRL + c to copy, CTRL + v to paste) 
-![Alt text](https://github.com/Ononame/token-gen-e/blob/master/９.png)
+![Alt text](https://github.com/Ononame/token-gen-e/blob/master/9.png)
 
