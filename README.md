@@ -19,7 +19,7 @@ addXMLRequestCallback(function(xhr){xhr.onreadystatechange=function(){if(xhr.rea
 ![Alt text](https://github.com/Ononame/token-gen/blob/master/4.png)
 
 
-第五步：点击确定按钮
+第五步：点击第三步中的确定按钮
 弹出框中即为token(ctrl+c 为复制，ctrl+v为粘贴)
 ![Alt text](https://github.com/Ononame/token-gen/blob/master/5.png)
 
