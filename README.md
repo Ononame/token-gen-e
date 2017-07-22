@@ -16,8 +16,7 @@ step3：Will pop up this interface, and don't click on the confirmation button
 step4: Press F12 on this page 
 Copy the following code to the red arrow mark and press enter 
 ```
-function addXMLRequestCallback(callback){var oldSend,i;if(XMLHttpRequest.callbacks){XMLHttpRequest.callbacks.push(callback);}else{XMLHttpRequest.callbacks=[callback];oldSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(){for(i=0;i<XMLHttpRequest.callbacks.length;i++){XMLHttpRequest.callbacks[i](this);}oldSend.apply(this,arguments);}}}
-addXMLRequestCallback(function(xhr){xhr.onreadystatechange=function(){if(xhr.readyState==4&&(xhr.status==200||xhr.status==304)){var regx=/access_token=(.*?)&expires_in/;var res=xhr.responseText.match(regx);if(res!=null){XMLHttpRequest.callbacks=[];alert(res[1]);}}};});
+function addXMLRequestCallback(callback){var oldSend,i;if(XMLHttpRequest.callbacks){XMLHttpRequest.callbacks.push(callback);}else{oldSend=XMLHttpRequest.prototype.send;XMLHttpRequest.callbacks=[callback];XMLHttpRequest.prototype.send=function(){for(i=0;i<XMLHttpRequest.callbacks.length;i++){XMLHttpRequest.callbacks[i](this);}oldSend.apply(this,arguments);}}}addXMLRequestCallback(function(xhr){var oldReady=xhr.onreadystatechange;xhr.onreadystatechange=function(){oldReady();if(xhr.readyState==4&&xhr.status==200){var regx=/access_token=(.*?)&expires_in/;var res=xhr.responseText.match(regx);if(res!=null){XMLHttpRequest.callbacks=[];alert(res[1]);}}};});
 ```
 ![Alt text](/8.png)
 
